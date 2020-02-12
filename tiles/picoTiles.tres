@@ -1,0 +1,346 @@
+[gd_resource type="TileSet" load_steps=15 format=2]
+
+[ext_resource path="res://s4m_ur4i-8x8-pico-8-free-tiles.png" type="Texture" id=1]
+[ext_resource path="res://tiles/fire1.png" type="Texture" id=2]
+[ext_resource path="res://tiles/fire2.png" type="Texture" id=3]
+[ext_resource path="res://tiles/fire3.png" type="Texture" id=4]
+[ext_resource path="res://tiles/fire4.png" type="Texture" id=5]
+[ext_resource path="res://tiles/fire5.png" type="Texture" id=6]
+[ext_resource path="res://tiles/star1.png" type="Texture" id=7]
+[ext_resource path="res://tiles/star2.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AnimatedTexture" id=3]
+frames = 5
+fps = 8.0
+frame_0/texture = ExtResource( 2 )
+frame_1/texture = ExtResource( 3 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 4 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 5 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 6 )
+frame_4/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=4]
+frames = 2
+fps = 6.0
+frame_0/texture = ExtResource( 7 )
+frame_0/delay_sec = 1.5
+frame_1/texture = ExtResource( 8 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=5]
+frames = 2
+fps = 9.0
+frame_0/texture = ExtResource( 7 )
+frame_0/delay_sec = 1.9
+frame_1/texture = ExtResource( 8 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 4, 8 )
+
+[resource]
+0/name = "grayBlock"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 8, 8, 8 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 4, 4 )
+0/navigation_offset = Vector2( 4, 4 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 4, 4 )
+} ]
+0/z_index = 0
+1/name = "bigGrayBlock"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 16, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 8, 8 )
+1/navigation_offset = Vector2( 8, 8 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+1/z_index = 0
+2/name = "bigPurpleBlock"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 32, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 8, 8 )
+2/navigation_offset = Vector2( 8, 8 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
+} ]
+2/z_index = 0
+3/name = "tallPurpleBlock"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 16, 32, 8, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 4, 8 )
+3/navigation_offset = Vector2( 4, 8 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 4, 8 )
+} ]
+3/z_index = 0
+4/name = "tallGrayBlock"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 16, 16, 8, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 4, 8 )
+4/navigation_offset = Vector2( 4, 8 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 4, 8 )
+} ]
+4/z_index = 0
+5/name = "bigTreeTop"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 24, 16, 24, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 12, 8 )
+5/navigation_offset = Vector2( 12, 8 )
+5/shapes = [  ]
+5/z_index = 0
+6/name = "bigTreeBottom"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 24, 32, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 8, 8 )
+6/navigation_offset = Vector2( 8, 8 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "treeBG1"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 48, 16, 24 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 8, 12 )
+7/navigation_offset = Vector2( 8, 12 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "treeBG2"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 16, 48, 16, 24 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 8, 12 )
+8/navigation_offset = Vector2( 8, 12 )
+8/shapes = [  ]
+8/z_index = 0
+9/name = "waterLine1"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 32, 48, 8, 8 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 4, 4 )
+9/navigation_offset = Vector2( 4, 4 )
+9/shapes = [  ]
+9/z_index = 0
+10/name = "waterLine2"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 56, 8, 8 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 4, 4 )
+10/navigation_offset = Vector2( 4, 4 )
+10/shapes = [  ]
+10/z_index = 0
+11/name = "waterLine3"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 32, 64, 8, 8 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 4, 4 )
+11/navigation_offset = Vector2( 4, 4 )
+11/shapes = [  ]
+11/z_index = 0
+12/name = "skullPile"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 48, 8, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 8, 8 )
+12/navigation_offset = Vector2( 8, 8 )
+12/shapes = [  ]
+12/z_index = -1
+13/name = "torch"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 48, 24, 8, 8 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 4, 4 )
+13/navigation_offset = Vector2( 4, 4 )
+13/shapes = [  ]
+13/z_index = 0
+14/name = "greenGem"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 56, 24, 8, 8 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 4, 4 )
+14/navigation_offset = Vector2( 4, 4 )
+14/shapes = [  ]
+14/z_index = 0
+15/name = "skull"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 58, 36, 4, 4 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 2, 2 )
+15/navigation_offset = Vector2( 2, 2 )
+15/shapes = [  ]
+15/z_index = 0
+16/name = "blackWithStar"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 40, 72, 8, 8 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 4, 4 )
+16/navigation_offset = Vector2( 4, 4 )
+16/shapes = [  ]
+16/z_index = 0
+17/name = "starLight"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 56, 72, 8, 8 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 4, 4 )
+17/navigation_offset = Vector2( 4, 4 )
+17/shapes = [  ]
+17/z_index = 0
+18/name = "starBright"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 48, 72, 8, 8 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 4, 4 )
+18/navigation_offset = Vector2( 4, 4 )
+18/shapes = [  ]
+18/z_index = 0
+19/name = "moon"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 40, 40, 40, 32 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 20, 16 )
+19/navigation_offset = Vector2( 20, 16 )
+19/shapes = [  ]
+19/z_index = 0
+20/name = "purple block"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 8, 8, 8, 8 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 4, 4 )
+20/navigation_offset = Vector2( 4, 4 )
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 4, 4 )
+} ]
+20/z_index = 0
+21/name = "grass"
+21/texture = ExtResource( 1 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 24, 0, 8, 8 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 4, 4 )
+21/navigation_offset = Vector2( 4, 4 )
+21/shapes = [  ]
+21/z_index = 0
+22/name = "vines"
+22/texture = ExtResource( 1 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 24, 8, 8, 8 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 4, 4 )
+22/navigation_offset = Vector2( 4, 4 )
+22/shapes = [  ]
+22/z_index = 1
+23/name = "campfireAnimated"
+23/texture = SubResource( 3 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 8, 8 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 4, 4 )
+23/navigation_offset = Vector2( 4, 4 )
+23/shapes = [  ]
+23/z_index = 0
+24/name = "starShines"
+24/texture = SubResource( 4 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 8, 8 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 4, 4 )
+24/navigation_offset = Vector2( 4, 4 )
+24/shapes = [  ]
+24/z_index = 0
+25/name = "starShines2"
+25/texture = SubResource( 5 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 8, 8 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 4, 4 )
+25/navigation_offset = Vector2( 4, 4 )
+25/shapes = [  ]
+25/z_index = 0

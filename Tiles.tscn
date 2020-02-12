@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Itch release raw tileset 01.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.10362, 4.0966 )
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Green" type="Sprite" parent="."]
+position = Vector2( 353.02, 279.77 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 8, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Green"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Green2" type="Sprite" parent="."]
+position = Vector2( 417.578, 280.999 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Green2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Green3" type="Sprite" parent="."]
+position = Vector2( 294.61, 331.416 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 24, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Green3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Purple Floor" type="Sprite" parent="."]
+position = Vector2( 352.405, 334.49 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Purple Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple Floor/StaticBody2D"]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Purple Floor2" type="Sprite" parent="."]
+position = Vector2( 399.143, 330.517 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 40, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Purple Floor2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple Floor2/StaticBody2D"]
+position = Vector2( -7.62939e-06, -7.62939e-06 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Purple Floor Grate" type="Sprite" parent="."]
+position = Vector2( 290.477, 375.386 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 8, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Purple Floor Grate"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple Floor Grate/StaticBody2D"]
+position = Vector2( -7.62939e-06, -7.62939e-06 )
+shape = SubResource( 1 )
+disabled = true
