@@ -4,48 +4,38 @@ class_name Entity
 #Sets the scene for gravity
 const upIsUp = Vector2(0, -1)
 
-# individual speeds settable in scene
-export(int) var run_speed := 50.0
-export(int) var jump_speed := 200.0
-export(int) var gravity := 50.0
-export(int) var max_fall_speed := 200.0
-var velo := Vector2.ZERO
+# individual speeds settable in scene and velocity
+export var speed := Vector2(85.0, 150.0)
+export var gravity := 640.0
 
-# other things
-var moveDir := 0
-var spriteDir := "right"
+# define necessary variables
+# the _ leading the variable name represents that it's a private variable
+# and should only meant to be used inside that script/class
+var _velocity := Vector2.ZERO
+var _spriteDir := "right"
 
-# sets sprite direction!
-func spritedir_loop():
-	# if moveDir is equal to left or right
-	if moveDir == -1:
-		spriteDir = "left"
-	if moveDir == 1:
-		spriteDir = "right"
-	
-# functions for things
-func movement_loop():
-	# the second vector sets the FLOOR to -1 
-	# which means: the floor is down duMMY
-# warning-ignore:return_value_discarded
-	move_and_slide(Vector2(moveDir * run_speed, velo.y), upIsUp)	
+# sets sprite direction for animation
+func set_spriteDir(sDir: String):
+	_spriteDir = sDir
 
-# ya'll like animated sprites!?
+## ya'll like animated sprites!? Function to  play the animations
 func play_anim(anim_name):
-	var newAnim = str(anim_name, spriteDir)
+	var newAnim = str(anim_name, _spriteDir)
 	if $anim.current_animation != newAnim:
 		$anim.play(newAnim)
-
-# are we playing the walk animation or nah?
-func animate():	
+#
+# which animation are we playing? then PLAY IT
+func animate():
+#	sets the direction of the sprite depending on movement
+	if _velocity.x > 0:
+		set_spriteDir("right")
+	elif _velocity.x < 0:
+		set_spriteDir("left")
+		
+#	play the corresponding animations
 	if !is_on_floor():
 		play_anim("jump")
-	elif moveDir != 0:
+	elif _spriteDir == "left" and _velocity.x < 0  or _spriteDir == "right" and _velocity.x > 0:
 		play_anim("walk")
 	else:
 		play_anim("idle")
-
-# called after controls
-func apply_gravity():
-	if !is_on_floor():
-		velo.y += gravity

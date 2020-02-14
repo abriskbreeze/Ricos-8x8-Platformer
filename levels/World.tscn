@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemies/zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/picoTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://images/background.png" type="Texture" id=4]
+
+[node name="World" type="Node2D"]
+position = Vector2( -10.2229, -16.0011 )
+__meta__ = {
+"_edit_vertical_guides_": [ 246.0, -34.0 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="background" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="parallax" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enable = true
+follow_viewport_scale = 0.9
+
+[node name="backTiles" type="TileMap" parent="parallax"]
+position = Vector2( -10.2229, -16.0011 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 4, 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 655372, 16, 0, 786456, 17, 0, 917540, 16, 0, 983049, 19, 0, 1179652, 16, 0, 1245210, 16, 0, 1376288, 24, 0, 1638439, 16, 0, 1769478, 25, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 4, 4 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1441852, 2, 0, 1638394, 1, 0, 1703953, 5, 0, 1703996, 2, 0, 1900538, 1, 0, 1835022, 8, 0, 1835056, 2, 0, 1966097, 6, 0, 1966100, 12, 0, 1966120, 0, 0, 1966132, 0, 0, 1966140, 2, 0, 2162682, 1, 0, 2097181, 7, 0, 2228238, 1, 0, 2228242, 4, 0, 2228244, 0, 0, 2228245, 22, 0, 2228246, 1, 0, 2228260, 1, 0, 2228264, 1, 0, 2228268, 1, 0, 2228272, 1, 0, 2228276, 1, 0, 2228280, 1, 0, 2424830, 1, 0, 2359298, 1, 0, 2359302, 1, 0, 2359306, 4, 0, 2359307, 22, 0, 2359308, 0, 0, 2359316, 3, 0, 2359322, 0, 0, 2359329, 23, 0, 2490380, 20, 0, 2490382, 3, 0, 2490383, 22, 0, 2490384, 2, 0, 2490390, 2, 0, 2490394, 1, 0, 2490398, 0, 0, 2490400, 0, 0, 2490402, 4, 0, 2621430, 11, 0, 2621432, 9, 0, 2621434, 10, 0, 2621436, 10, 0, 2555925, 22, 0, 2555940, 9, 0, 2555942, 10, 0, 2555944, 11, 0, 2555946, 10, 0, 2555948, 11, 0, 2555950, 9, 0, 2555952, 10, 0, 2621448, 3, 0, 2621449, 22, 0, 2621450, 2, 0, 2621460, 20, 0, 2621470, 2, 0, 2752538, 20, 0, 2752540, 20, 0, 2752546, 20, 0 )
+
+[node name="frontTiles" type="TileMap" parent="."]
+z_index = 2
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 4, 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 2097170, 21, 0, 2162705, 15, 0, 2228236, 21, 0, 2359324, 21, 0, 2359326, 21, 0 )
+
+[node name="zombie" parent="." instance=ExtResource( 2 )]
+position = Vector2( 21.9418, 127.124 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 93.185, 121.087 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = -34
+limit_right = 246
+
+[editable path="Player"]

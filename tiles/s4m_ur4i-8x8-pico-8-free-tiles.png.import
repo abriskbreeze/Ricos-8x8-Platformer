@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/s4m_ur4i-8x8-pico-8-free-tiles.png-b9e9e71979d9bc22defba5e09aa23c7c.stex"
+path="res://.import/s4m_ur4i-8x8-pico-8-free-tiles.png-6dd3b2b9761f39f3bac653b7c291c96c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://s4m_ur4i-8x8-pico-8-free-tiles.png"
-dest_files=[ "res://.import/s4m_ur4i-8x8-pico-8-free-tiles.png-b9e9e71979d9bc22defba5e09aa23c7c.stex" ]
+source_file="res://tiles/s4m_ur4i-8x8-pico-8-free-tiles.png"
+dest_files=[ "res://.import/s4m_ur4i-8x8-pico-8-free-tiles.png-6dd3b2b9761f39f3bac653b7c291c96c.stex" ]
 
 [params]
 

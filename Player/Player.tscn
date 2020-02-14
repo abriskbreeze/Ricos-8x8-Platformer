@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/player1export.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3, 4 )
+extents = Vector2( 3, 3.88 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idleleft"
@@ -57,7 +57,19 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1, 0 ) ]
+"values": [ Vector2( 1, 0.12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("EnemyDetector:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 0 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -110,7 +122,19 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1, 0 ) ]
+"values": [ Vector2( -1, 0.12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("EnemyDetector:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -166,6 +190,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 1, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("EnemyDetector:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 0 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "jumpright"
@@ -218,7 +254,19 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1, 0 ) ]
+"values": [ Vector2( -1, 0.12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("EnemyDetector:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -259,7 +307,19 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1, 0 ) ]
+"values": [ Vector2( 1, 0.12 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("EnemyDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 0 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -300,22 +360,35 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1, 0 ) ]
+"values": [ Vector2( -1, 0.12 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("EnemyDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 3.13864, 4 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -4 )
+collision_mask = 10
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-run_speed = 60
-jump_speed = 210
-gravity = 18
-max_fall_speed = 160
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+flip_h = true
 vframes = 2
 hframes = 8
 frame = 4
@@ -324,14 +397,27 @@ region_rect = Rect2( 0, 0, 64, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2( -1, 0 )
+position = Vector2( 1, 0.12 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -14 )
+position = Vector2( 0, -28 )
 current = true
-drag_margin_top = 0.4
-drag_margin_bottom = 0.3
+limit_left = -70
+limit_top = 0
+limit_right = 250
+limit_bottom = 200
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="anim" type="AnimationPlayer" parent="."]
 playback_speed = 5.0
@@ -341,3 +427,16 @@ anims/jumpleft = SubResource( 4 )
 anims/jumpright = SubResource( 5 )
 anims/walkleft = SubResource( 6 )
 anims/walkright = SubResource( 7 )
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+position = Vector2( 2, 0 )
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+modulate = Color( 0.384314, 1, 0, 1 )
+position = Vector2( -1, 0 )
+shape = SubResource( 8 )
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

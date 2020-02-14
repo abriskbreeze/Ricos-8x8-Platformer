@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://enemies/zombie.gd" type="Script" id=1]
 [ext_resource path="res://enemies/zombie1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.5, 4 )
+extents = Vector2( 3.5, 3 )
 
 [sub_resource type="Animation" id=2]
 loop = true
@@ -43,7 +43,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -0.5, 0 ) ]
+"values": [ Vector2( -0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -4 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -83,7 +107,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0 ) ]
+"values": [ Vector2( 0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3, -4 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -124,7 +172,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -0.5, 0 ) ]
+"values": [ Vector2( -0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -4 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -165,7 +237,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0 ) ]
+"values": [ Vector2( 0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3, -4 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -206,7 +302,31 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -0.5, 0 ) ]
+"values": [ Vector2( -0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -4 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -247,11 +367,40 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0 ) ]
+"values": [ Vector2( 0.5, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StompDetector:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VisibilityEnabler2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3, -4 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 3.58453, 1.60733 )
+
 [node name="zombie" type="KinematicBody2D"]
-position = Vector2( 0, -4 )
+position = Vector2( 0, -4.02676 )
+collision_layer = 2
+collision_mask = 9
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -260,11 +409,11 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 5
-frame = 4
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2( -0.5, 0 )
+position = Vector2( -0.5, 1 )
 shape = SubResource( 1 )
 one_way_collision_margin = 0.0
 
@@ -276,3 +425,20 @@ anims/jumpleft = SubResource( 4 )
 anims/jumpright = SubResource( 5 )
 anims/walkleft = SubResource( 6 )
 anims/walkright = SubResource( 7 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -4, -4 )
+scale = Vector2( 1.4, 1.6 )
+rect = Rect2( 0, 0, 5, 5 )
+process_parent = true
+physics_process_parent = true
+
+[node name="StompDetector" type="Area2D" parent="."]
+modulate = Color( 0, 1, 0.105882, 1 )
+position = Vector2( 0, -2 )
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
+position = Vector2( -0.5, -1.04795 )
+shape = SubResource( 8 )
+[connection signal="body_entered" from="StompDetector" to="." method="_on_stompDetector_body_entered"]

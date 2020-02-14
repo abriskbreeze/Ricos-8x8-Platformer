@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Ricos 8x8 Test"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://levels/World.tscn"
+config/icon="res://tiles/icon.png"
 
 [autoload]
 
@@ -97,8 +97,15 @@ ui_down={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemies"
+2d_physics/layer_3="coins"
+2d_physics/layer_4="world"
+
 [rendering]
 
 quality/2d/use_pixel_snap=true
 environment/default_clear_color=Color( 0, 0, 0, 1 )
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://tiles/default_env.tres"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tiles/picoTiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemies/zombie.tscn" type="PackedScene" id=3]
+
+[node name="testLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -458763, 1, 0, -524261, 1, 0, -327691, 1, 0, -393189, 1, 0, -196619, 1, 0, -262117, 1, 0, -196598, 4, 0, -65547, 1, 0, -131072, 1, 0, -131063, 0, 0, -131045, 1, 0, 65525, 1, 0, 65527, 2, 0, 65529, 1, 0, 65531, 1, 0, 65533, 2, 0, 65535, 1, 0, 1, 1, 0, 3, 1, 0, 5, 1, 0, 7, 2, 0, 9, 1, 0, 11, 1, 0, 13, 1, 0, 15, 1, 0, 17, 1, 0, 19, 1, 0, 21, 1, 0, 23, 1, 0, 25, 1, 0, 27, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -28.8197, -33.1044 )
+
+[node name="zombie" parent="." instance=ExtResource( 3 )]
+position = Vector2( 156.424, -8.73238 )
+speed = Vector2( 35, 150 )

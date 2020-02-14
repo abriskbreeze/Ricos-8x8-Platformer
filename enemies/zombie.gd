@@ -1,28 +1,26 @@
 extends Entity
 
-# this man just wanders randomly
-var movetimer_length = 30
-var movetimer = 0
-
 func _ready():
-#	$anim.play("idleleft")
-	moveDir = dir.rand()
+	speed.x = 35.0
+	_velocity.x = -speed.x
 
+# if this boy gets stepped on by the player, using collision nodes
+func _on_stompDetector_body_entered(body: PhysicsBody2D) -> void:
+	if body.global_position.y > get_node("StompDetector").global_position.y:
+		return
+#	get_node("CollisionShape2D").disabled = true # outdated?
+	set_deferred("disabled", true)
+	queue_free()
 
 
 func _physics_process(delta: float) -> void:
-	apply_gravity()
-	movement_loop()
-	spritedir_loop()
+	# applies gravity?
+	_velocity.y += gravity * delta
+	
+	#turn around if it hits a wall
+	if is_on_wall():
+		_velocity.x *= -1.0
+	
+	#then move and animate!
+	_velocity.y = move_and_slide(_velocity, upIsUp).y
 	animate()
-
-	if movetimer > 0:
-		movetimer -= 1
-	if movetimer == 0:
-		moveDir = dir.rand()
-		movetimer = movetimer_length
-		
-#		if moveDir == -1:
-#			print("left")
-#		elif moveDir == 1:
-#			print("right")
